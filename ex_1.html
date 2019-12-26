@@ -1,0 +1,21 @@
+<script>
+    function myFunction() {
+        var exist = 1;
+        var myArr = [10, 25, 16, -5, 30, 15, 24]
+        for (i = 0; i < myArr.length; i++) {
+            if (myArr[i] > 16) {
+                exist = 1;
+                console.log(myArr[i])
+
+            } else if (!(myArr[i] > 16)) {
+                exist = 0;
+
+            }
+        }
+        if (exist == 0) {
+            console.log('Such values do not exist')
+        }
+    }
+
+    myFunction()
+</script>

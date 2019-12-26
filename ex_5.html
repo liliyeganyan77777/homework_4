@@ -1,0 +1,30 @@
+<script>
+    var numArray = [-9, -4, -4, 3, 12, 14]
+    for (var i = 0; i < numArray.length - 1; i++) {
+        var min = i;
+        for (var j = i + 1; j < numArray.length; j++) {
+            if (numArray[j] < numArray[min]) {
+                min = j;
+            }
+        }
+
+        if (min != i) {
+            var target = numArray[i];
+            numArray[i] = numArray[min];
+            numArray[min] = target;
+            var indices = [];
+
+            var idx = numArray.indexOf(target);
+            while (idx != -1) {
+                indices.push(idx);
+                idx = numArray.indexOf(target, idx + 1);
+            }
+            console.log(indices);
+            break;
+
+        } else {
+            console.log(-1)
+            break;
+        }
+    }
+</script>
